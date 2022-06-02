@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Ivan\'s test app</string>
+    <string name="err_empty_urls">В файле нет урлов</string>
+</resources>

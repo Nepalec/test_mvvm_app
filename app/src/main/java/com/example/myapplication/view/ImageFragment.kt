@@ -21,11 +21,11 @@ class ImageFragment  : Fragment()
     {
         b = FragmentImageBinding.inflate(inflater, container, false)
         Glide.with(requireContext()).load(args.url).into(b.img)
-        b.img.setOnPhotoTapListener{ v,x,y -> imgTapped(v,x,y)}
+        b.img.setOnPhotoTapListener{ _, _, _ -> imgTapped()}
         return b.root
     }
 
-    private fun imgTapped(v: ImageView?, x: Float, y: Float) {
+    private fun imgTapped() {
         fs=!fs
         (activity as MainActivity).enterFS(fs)
     }

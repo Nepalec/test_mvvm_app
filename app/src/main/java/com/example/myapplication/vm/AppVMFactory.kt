@@ -9,9 +9,10 @@ class AppVMFactory @Inject constructor(dp:DataProvider): ViewModelProvider.Facto
 
     private val dataProvider = dp
 
+    @Suppress("UNCHECKED_CAST")
     override fun <T : ViewModel> create(modelClass: Class<T>): T
     {
-        if (modelClass.isAssignableFrom(MainViewModel::class.java))
+        if (modelClass == MainViewModel::class.java)
             return MainViewModel(dataProvider) as T
         else
             throw IllegalArgumentException("ViewModel Not Found")

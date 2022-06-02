@@ -13,7 +13,9 @@ import com.bumptech.glide.load.DataSource
 import com.bumptech.glide.load.engine.DiskCacheStrategy
 import com.bumptech.glide.load.engine.GlideException
 import com.bumptech.glide.request.RequestListener
+import com.bumptech.glide.request.RequestOptions
 import com.bumptech.glide.request.target.Target
+import com.bumptech.glide.signature.ObjectKey
 import com.example.myapplication.databinding.GridItemBinding
 
 
@@ -58,10 +60,16 @@ class PicturesAdapter(
 
             }
             root.setOnClickListener{ onClick(url)}
+
+            val requestOptions = RequestOptions()
+                .diskCacheStrategy(DiskCacheStrategy.ALL)
+                .override(50,50)
+
             Glide.with(context)
                 .load(url)
                 .listener(requestListener)
-                .diskCacheStrategy(DiskCacheStrategy.DATA)
+                .diskCacheStrategy(DiskCacheStrategy.ALL)
+                .apply(requestOptions)
                 .centerCrop()
                 .into(img);
 

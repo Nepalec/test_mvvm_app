@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="@dimen/thumbnail_size"
     android:layout_height="@dimen/thumbnail_size"
-    android:background="?color_bg"
+    android:background="@color/main_bg"
     tools:context=".view.MainFragment">
 
 
@@ -26,6 +26,7 @@
         tools:text="error"
         android:visibility="gone"
         android:textSize="6sp"
+        android:textColor="@color/main_text"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

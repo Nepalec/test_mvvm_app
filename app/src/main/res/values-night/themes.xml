@@ -16,7 +16,5 @@
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
-        <item name="color_bg">@color/brown</item>
-        <item name="color_text">@color/white</item>
     </style>
 </resources>

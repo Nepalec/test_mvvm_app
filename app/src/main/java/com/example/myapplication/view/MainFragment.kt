@@ -41,6 +41,7 @@ class MainFragment : Fragment()
         savedInstanceState: Bundle?
     ): View {
         _b = FragmentMainBinding.inflate(inflater, container, false)
+        b.nightBtn.setOnClickListener{(activity as MainActivity).nightModeSwitch()}
         return b.root
     }
 
